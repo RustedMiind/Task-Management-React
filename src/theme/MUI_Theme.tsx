@@ -1,17 +1,15 @@
 import { colors, createTheme } from "@mui/material";
-import "../assets/fonts/include.scss";
+// import "../assets/fonts/include.scss";
 import "./Mui_Custom.scss";
 
 export const theme = createTheme({
   direction: "rtl",
-  shape: {
-    borderRadius: 10,
-  },
+
   palette: {
+    mode: "dark",
     primary: {
-      main: "#004693",
-      contrastText: "#FFFFFF",
-      lightest: "#F3F5F7",
+      main: "#FED36A ",
+      contrastText: "#000000",
     },
     success: {
       main: "#18CB5F",
@@ -26,42 +24,32 @@ export const theme = createTheme({
       main: "#F19B02",
       lightest: "#FDF0D9",
     },
-    // secondary: {
-    //   main: "#004693",
-    // },
+    secondary: {
+      main: "#263238",
+    },
     background: {
-      paper: "#F3F5F7",
-      default: "#FFFFFF",
-      med: "#D2DCEA",
+      paper: "#455A64",
+      default: "#212832 ",
+      // med: "#455A64",
     },
     text: {
-      primary: "#004693",
-      secondary: colors.grey[600],
+      primary: "#FFFFFF",
+      secondary: "#8CAAB9",
       disabled: colors.grey[600],
     },
   },
   components: {
     MuiTypography: {
-      styleOverrides: {
-        root: {
-          fontFamily: "TheSans",
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          borderRadius: 8,
-        },
-      },
+      // styleOverrides: {
+      //   root: {
+      //     fontFamily: "TheSans",
+      //   },
+      // },
     },
     MuiButton: {
       defaultProps: {
         disableElevation: true,
       },
-    },
-    MuiPaper: {
-      defaultProps: { elevation: 0 },
     },
   },
   typography: {
