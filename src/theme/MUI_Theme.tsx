@@ -39,13 +39,6 @@ export const theme = createTheme({
     },
   },
   components: {
-    MuiTypography: {
-      // styleOverrides: {
-      //   root: {
-      //     fontFamily: "TheSans",
-      //   },
-      // },
-    },
     MuiButton: {
       defaultProps: {
         disableElevation: true,
@@ -54,7 +47,7 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: [
-      "TheSans",
+      "Inter",
       "-apple-system",
       "BlinkMacSystemFont",
       '"Segoe UI"',

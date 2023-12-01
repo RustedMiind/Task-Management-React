@@ -1,26 +1,26 @@
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from "@mui/material/Toolbar";
-import Navbar from "./components/Navbar";
-import DrawerComponent from "./components/Drawer";
+import BottomNavigation from "./components/BottomNavigation";
 import { Children } from "../../types/Children";
-
-const drawerWidth = 240;
+import { Stack } from "@mui/material";
+import AppBar from "./components/AppBar";
 
 export default function MainLayout(props: PropsType) {
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <Navbar width={drawerWidth} />
-      <DrawerComponent width={drawerWidth} />
+    <Stack>
+      <AppBar isVisible={true} title={"News"} />
       <Box
         component="main"
-        sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
+        sx={{
+          bgcolor: "background.default",
+          color: "text.primary",
+          minHeight: "100vh",
+          p: 2,
+        }}
       >
-        <Toolbar />
         {props.children}
       </Box>
-    </Box>
+      <BottomNavigation />
+    </Stack>
   );
 }
 

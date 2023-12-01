@@ -7,6 +7,8 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+MountApp("development");
+
 function MountApp(type: "development") {
   switch (type) {
     case "development":
