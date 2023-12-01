@@ -9,10 +9,15 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useEffect, useState } from "react";
+import { useNavigation, useLocation, useNavigate } from "react-router-dom";
+import separatePath from "../../../methods/separatePath";
 
 function AppBar(props: PropsType) {
   const TRANSISION_TIME: number = 400;
   const isTitleString = typeof props.title === "string";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const paths = separatePath(location.pathname);
   const [isBarVisible, setIsBarVisible] = useState(false);
   useEffect(() => {
     if (props.isVisible) {
@@ -27,13 +32,18 @@ function AppBar(props: PropsType) {
       setTimeout(props.onHide, TRANSISION_TIME);
     }
   }
+  function goBackOne() {
+    if (paths.length > 0) {
+      const newPath = paths.slice(0, paths.length - 1).join("/");
+      navigate({ pathname: newPath });
+    }
+  }
   return (
     <Box>
       <Toolbar
         sx={{
           bgcolor: "background.default",
           color: "text.primary",
-          // flexGrow: 1,
           transition: `${TRANSISION_TIME}ms`,
           maxHeight: isBarVisible ? 56 : 0,
           pointerEvents: isBarVisible ? "all" : "none",
@@ -45,8 +55,8 @@ function AppBar(props: PropsType) {
           size="large"
           edge="start"
           color="inherit"
-          aria-label="menu"
           sx={{ mr: 2 }}
+          onClick={goBackOne}
         >
           <ArrowBackIcon />
         </IconButton>

@@ -1,5 +1,7 @@
 import { Stack, TextField, Box, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import SquareButton from "../../../../../components/SquareButton";
+import TuneIcon from "@mui/icons-material/Tune";
 
 function SearchTasks() {
   return (
@@ -18,6 +20,9 @@ function SearchTasks() {
           }}
         />
       </Box>
+      <SquareButton>
+        <TuneIcon />
+      </SquareButton>
     </Stack>
   );
 }
