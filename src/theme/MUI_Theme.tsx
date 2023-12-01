@@ -3,8 +3,6 @@ import { colors, createTheme } from "@mui/material";
 import "./Mui_Custom.scss";
 
 export const theme = createTheme({
-  direction: "rtl",
-
   palette: {
     mode: "dark",
     primary: {

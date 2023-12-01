@@ -43,7 +43,7 @@ export default function MainLayout(props: PropsType) {
       <Box
         component="main"
         sx={{
-          p: 2,
+          p: 1,
         }}
       >
         {props.children}
