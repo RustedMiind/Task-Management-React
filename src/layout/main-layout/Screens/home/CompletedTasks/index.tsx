@@ -6,7 +6,17 @@ function CompletedTasks() {
   return (
     <Stack>
       <SectionTitle title="Completed Tasks" />
-      <TaskCard unique />
+      <Stack
+        direction="row"
+        spacing={2}
+        sx={{ maxWidth: 1, overflowX: "scroll" }}
+      >
+        <TaskCard unique />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+      </Stack>
     </Stack>
   );
 }

@@ -14,6 +14,7 @@ function CustomAvatarGroup(props: PropsType) {
   return (
     <AvatarGroup
       max={props.max}
+      sx={{ width: "fit-content" }}
       slotProps={{
         additionalAvatar: { sx: styles },
       }}

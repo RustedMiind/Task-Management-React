@@ -2,6 +2,7 @@ import { Stack } from "@mui/material";
 import WelcomeSection from "./WelcomeSection/";
 import SearchTasks from "./SearchTasks";
 import CompletedTasks from "./CompletedTasks";
+import OngoingTasks from "./OngoingTasks";
 
 function HomeScreen() {
   return (
@@ -9,6 +10,7 @@ function HomeScreen() {
       <WelcomeSection />
       <SearchTasks />
       <CompletedTasks />
+      <OngoingTasks />
     </Stack>
   );
 }

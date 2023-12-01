@@ -30,6 +30,7 @@ export default function MainLayout(props: PropsType) {
         minHeight: "100vh",
         bgcolor: "background.default",
         color: "text.primary",
+        pb: "60px",
       }}
     >
       {includeAppBar && (

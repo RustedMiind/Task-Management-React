@@ -11,13 +11,19 @@ function TaskCard(props: PropsType) {
       component={Paper}
       bgcolor={props.unique ? "primary.main" : undefined}
       color={props.unique ? "background.default" : undefined}
-      sx={{ width: (BOX_SIDE_LENGTH * 5) / 4, height: BOX_SIDE_LENGTH, p: 1.5 }}
+      sx={{
+        width: (BOX_SIDE_LENGTH * 5) / 4,
+        height: BOX_SIDE_LENGTH,
+        minWidth: (BOX_SIDE_LENGTH * 5) / 4,
+        minHeight: BOX_SIDE_LENGTH,
+        p: 1.5,
+      }}
       gap={1}
       justifyContent="space-between"
     >
       <Title />
       <TeamMembers variant={props.unique ? "dark" : "light"} />
-      <Progress progress={74} dark={props.unique} />
+      <Progress progress={100} dark={props.unique} />
     </Stack>
   );
 }

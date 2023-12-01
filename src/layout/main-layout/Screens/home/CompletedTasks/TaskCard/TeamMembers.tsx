@@ -1,4 +1,5 @@
 import { Avatar, AvatarGroup, Stack, Typography } from "@mui/material";
+import CustomAvatarGroup from "../../../../../../components/CustomAvatarGroup";
 
 const AVATAR_SIZE = 26;
 const CustomAvatar = (props: CustomAvatarProps) => (
@@ -21,18 +22,20 @@ function TeamMembers(props: PropsType) {
       >
         Team Members
       </Typography>
-      <AvatarGroup
+      <CustomAvatarGroup
         max={3}
-        slotProps={{
-          additionalAvatar: { sx: { width: AVATAR_SIZE, height: AVATAR_SIZE } },
-        }}
-      >
-        <CustomAvatar alt="Remy Sharp" />
-        <CustomAvatar alt="Travis Howard" />
-        <CustomAvatar alt="Cindy Baker" />
-        <CustomAvatar alt="Agnes Walker" />
-        <CustomAvatar alt="Trevor Henderson" />
-      </AvatarGroup>
+        size={26}
+        avatars={[
+          { alt: "ali" },
+          { alt: "ali" },
+          { alt: "ali" },
+          { alt: "ali" },
+          { alt: "ali" },
+          { alt: "ali" },
+          { alt: "ali" },
+          { alt: "ali" },
+        ]}
+      />
     </Stack>
   );
 }
