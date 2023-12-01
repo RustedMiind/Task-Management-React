@@ -2,7 +2,7 @@ import { Button, Stack, Typography, ButtonProps } from "@mui/material";
 
 function SectionTitle(props: PropsType) {
   return (
-    <Stack alignItems="center" spacing={2} mb={2}>
+    <Stack alignItems="center" direction="row" spacing={2} mb={2}>
       <Typography variant="h6" fontWeight={700} flexGrow={1}>
         {props.title}{" "}
       </Typography>
