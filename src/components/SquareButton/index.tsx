@@ -1,4 +1,5 @@
 import { Button, ButtonProps } from "@mui/material";
+import React from "react";
 
 function SquareButton(props: PropsType) {
   let actualLength: number;
@@ -19,7 +20,7 @@ function SquareButton(props: PropsType) {
       variant="contained"
       {...props.buttonProps}
       sx={{
-        ...props.buttonProps.sx,
+        ...props.buttonProps?.sx,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -29,7 +30,9 @@ function SquareButton(props: PropsType) {
         width: actualLength,
         height: actualLength,
       }}
-    ></Button>
+    >
+      {props.children}
+    </Button>
   );
 }
 
@@ -37,5 +40,6 @@ export default SquareButton;
 
 type PropsType = {
   sideLength?: number | "small" | "medium";
-  buttonProps: ButtonProps;
+  buttonProps?: ButtonProps;
+  children: React.ReactNode;
 };
