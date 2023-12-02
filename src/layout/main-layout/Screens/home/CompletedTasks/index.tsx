@@ -9,7 +9,7 @@ function CompletedTasks() {
       <Stack
         direction="row"
         spacing={2}
-        sx={{ maxWidth: 1, overflowX: "scroll" }}
+        sx={{ maxWidth: 1, overflowX: { xs: "auto", md: "hidden" } }}
       >
         <TaskCard unique />
         <TaskCard />
